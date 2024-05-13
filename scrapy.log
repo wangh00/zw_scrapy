@@ -1,0 +1,210 @@
+2024-04-30 14:30:55 [scrapy.utils.log] INFO: Scrapy 2.9.0 started (bot: zw_scrapy)
+2024-04-30 14:30:55 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Windows-10-10.0.19045-SP0
+2024-04-30 14:30:55 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_MAX_DELAY': 6,
+ 'AUTOTHROTTLE_START_DELAY': 3,
+ 'BOT_NAME': 'zw_scrapy',
+ 'CLOSESPIDER_ERRORCOUNT': 5,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'scrapy.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'zw_scrapy.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['zw_scrapy.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2024-04-30 14:30:55 [scrapy.extensions.telnet] INFO: Telnet Password: bb50393a89b2c465
+2024-04-30 14:30:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2024-04-30 14:30:55 [zwspider] INFO: Reading start URLs from redis key 'zwspider:start_urls' (batch size: 16, encoding: utf-8)
+2024-04-30 14:30:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'zw_scrapy.middlewares.RotateUserAgentMiddleware',
+ 'zw_scrapy.middlewares.URLFetchLimitMiddleware',
+ 'zw_scrapy.middlewares.ZwScrapyDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-04-30 14:30:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-04-30 14:30:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['zw_scrapy.pipelines.ZwScrapyPipeline']
+2024-04-30 14:30:55 [scrapy.core.engine] INFO: Spider opened
+2024-04-30 14:30:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-04-30 14:30:55 [zwspider] INFO: Spider opened: zwspider
+2024-04-30 14:30:55 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 216, 'file_name': 'GXYZ202204007', 'file_path': 'GXYZ\\2022\\GXYZ202204007.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204007'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 214, 'file_name': 'GXYZ202204005', 'file_path': 'GXYZ\\2022\\GXYZ202204005.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204005'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 204, 'file_name': 'GXSY202205003', 'file_path': 'GXSY\\2022\\GXSY202205003.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXSY202205003'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 213, 'file_name': 'GXYZ202204003', 'file_path': 'GXYZ\\2022\\GXYZ202204003.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204003'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 210, 'file_name': 'GXYY202204007', 'file_path': 'GXYY\\2022\\GXYY202204007.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204007'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 217, 'file_name': 'GXYZ202204009', 'file_path': 'GXYZ\\2022\\GXYZ202204009.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204009'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 209, 'file_name': 'GXYY202204006', 'file_path': 'GXYY\\2022\\GXYY202204006.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204006'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 212, 'file_name': 'GXYZ202204001', 'file_path': 'GXYZ\\2022\\GXYZ202204001.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204001'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 219, 'file_name': 'GXYZ202204011', 'file_path': 'GXYZ\\2022\\GXYZ202204011.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204011'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 218, 'file_name': 'GXYZ202204010', 'file_path': 'GXYZ\\2022\\GXYZ202204010.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204010'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/4E423F
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 220, 'file_name': 'GXYZ202204012', 'file_path': 'GXYZ\\2022\\GXYZ202204012.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204012'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 211, 'file_name': 'GXYY202204009', 'file_path': 'GXYY\\2022\\GXYY202204009.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204009'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 215, 'file_name': 'GXYZ202204006', 'file_path': 'GXYZ\\2022\\GXYZ202204006.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204006'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 208, 'file_name': 'GXYY202204005', 'file_path': 'GXYY\\2022\\GXYY202204005.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204005'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 202, 'file_name': 'GXQG202206063', 'file_path': 'GXQG\\2022\\GXQG202206063.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXQG202206063'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36
+2024-04-30 14:30:55 [scrapy.crawler] INFO: {'id': 203, 'file_name': 'GXSY202205002', 'file_path': 'GXSY\\2022\\GXSY202205002.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXSY202205002'}
+2024-04-30 14:30:55 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36
+2024-05-06 10:16:26 [scrapy.utils.log] INFO: Scrapy 2.9.0 started (bot: zw_scrapy)
+2024-05-06 10:16:26 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Windows-10-10.0.19045-SP0
+2024-05-06 10:16:26 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_MAX_DELAY': 6,
+ 'AUTOTHROTTLE_START_DELAY': 3,
+ 'BOT_NAME': 'zw_scrapy',
+ 'CLOSESPIDER_ERRORCOUNT': 5,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'scrapy.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'zw_scrapy.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['zw_scrapy.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2024-05-06 10:16:26 [scrapy.extensions.telnet] INFO: Telnet Password: cd01184fb599784e
+2024-05-06 10:16:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2024-05-06 10:16:27 [zwspider] INFO: Reading start URLs from redis key 'zwspider:start_urls' (batch size: 16, encoding: utf-8)
+2024-05-06 10:16:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'zw_scrapy.middlewares.RotateUserAgentMiddleware',
+ 'zw_scrapy.middlewares.URLFetchLimitMiddleware',
+ 'zw_scrapy.middlewares.ZwScrapyDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-05-06 10:16:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-05-06 10:16:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['zw_scrapy.pipelines.ZwScrapyPipeline']
+2024-05-06 10:16:28 [scrapy.core.engine] INFO: Spider opened
+2024-05-06 10:16:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-05-06 10:16:28 [zwspider] INFO: Spider opened: zwspider
+2024-05-06 10:16:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-05-06 10:16:28 [scrapy.crawler] INFO: {'id': 201, 'file_name': 'GXMZ202203010', 'file_path': 'GXMZ\\2022\\GXMZ202203010.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXMZ202203010'}
+2024-05-06 10:16:28 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/4E423F
+2024-05-06 10:16:28 [scrapy.crawler] INFO: {'id': 207, 'file_name': 'GXYY202204004', 'file_path': 'GXYY\\2022\\GXYY202204004.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204004'}
+2024-05-06 10:16:28 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2024-05-06 10:16:28 [scrapy.crawler] INFO: {'id': 206, 'file_name': 'GXYY202204002', 'file_path': 'GXYY\\2022\\GXYY202204002.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204002'}
+2024-05-06 10:16:28 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2024-05-06 10:16:28 [scrapy.crawler] INFO: {'id': 205, 'file_name': 'GXYY202204001', 'file_path': 'GXYY\\2022\\GXYY202204001.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYY202204001'}
+2024-05-06 10:16:28 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2024-05-06 10:16:29 [zwspider] INFO: 201请求完成
+2024-05-06 10:16:29 [zwspider] INFO: 206请求完成
+2024-05-06 10:16:29 [zwspider] INFO: 已达到 URL 抓取限制 2。暂停 20 秒。
+2024-05-06 10:16:49 [zwspider] INFO: 已保存：\\192.168.1.171\d\zw_test\GXMZ\2022\GXMZ202203010.html
+2024-05-06 10:16:49 [zwspider] INFO: 205请求完成
+2024-05-06 10:16:49 [zwspider] INFO: 207请求完成
+2024-05-06 10:16:49 [zwspider] INFO: 已达到 URL 抓取限制 2。暂停 20 秒。
+2024-05-06 10:16:57 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2024-05-06 10:20:16 [scrapy.utils.log] INFO: Scrapy 2.9.0 started (bot: zw_scrapy)
+2024-05-06 10:20:16 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform Windows-10-10.0.19045-SP0
+2024-05-06 10:20:16 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_MAX_DELAY': 6,
+ 'AUTOTHROTTLE_START_DELAY': 3,
+ 'BOT_NAME': 'zw_scrapy',
+ 'CLOSESPIDER_ERRORCOUNT': 5,
+ 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'scrapy.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'zw_scrapy.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler',
+ 'SPIDER_MODULES': ['zw_scrapy.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2024-05-06 10:20:17 [scrapy.extensions.telnet] INFO: Telnet Password: 05d5c0875a53c71f
+2024-05-06 10:20:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2024-05-06 10:20:17 [zwspider] INFO: Reading start URLs from redis key 'zwspider:start_urls' (batch size: 16, encoding: utf-8)
+2024-05-06 10:20:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'zw_scrapy.middlewares.RotateUserAgentMiddleware',
+ 'zw_scrapy.middlewares.URLFetchLimitMiddleware',
+ 'zw_scrapy.middlewares.ZwScrapyDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-05-06 10:20:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-05-06 10:20:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['zw_scrapy.pipelines.ZwScrapyPipeline']
+2024-05-06 10:20:17 [scrapy.core.engine] INFO: Spider opened
+2024-05-06 10:20:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-05-06 10:20:17 [zwspider] INFO: Spider opened: zwspider
+2024-05-06 10:20:17 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-05-06 10:20:17 [scrapy.crawler] INFO: {'id': 223, 'file_name': 'GYJJ202206008', 'file_path': 'GYJJ\\2022\\GYJJ202206008.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GYJJ202206008'}
+2024-05-06 10:20:17 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2024-05-06 10:20:17 [scrapy.crawler] INFO: {'id': 221, 'file_name': 'GXYZ202204013', 'file_path': 'GXYZ\\2022\\GXYZ202204013.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXYZ202204013'}
+2024-05-06 10:20:17 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2024-05-06 10:20:17 [zwspider] INFO: 已达到 URL 抓取限制 2。暂停 20 秒。
+2024-05-06 10:20:37 [scrapy.crawler] INFO: {'id': 222, 'file_name': 'GXZJ202205004', 'file_path': 'GXZJ\\2022\\GXZJ202205004.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GXZJ202205004'}
+2024-05-06 10:20:37 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36
+2024-05-06 10:20:37 [scrapy.crawler] INFO: {'id': 224, 'file_name': 'GYKJ202212012', 'file_path': 'GYKJ\\2022\\GYKJ202212012.html', 'parse_url': 'https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2013&filename=GYKJ202212012'}
+2024-05-06 10:20:37 [zwspider] INFO: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2024-05-06 10:20:37 [zwspider] INFO: 已达到 URL 抓取限制 2。暂停 20 秒。
+2024-05-06 10:20:57 [zwspider] INFO: 223请求完成
+2024-05-06 10:20:57 [zwspider] INFO: 221请求完成
+2024-05-06 10:20:57 [zwspider] INFO: 224请求完成
+2024-05-06 10:20:57 [zwspider] INFO: 222请求完成
+2024-05-06 10:20:57 [zwspider] INFO: 已保存：\\192.168.1.171\d\zw_test\GYJJ\2022\GYJJ202206008.html
+2024-05-06 10:20:57 [zwspider] INFO: 已保存：\\192.168.1.171\d\zw_test\GXYZ\2022\GXYZ202204013.html
+2024-05-06 10:20:57 [zwspider] INFO: 已保存：\\192.168.1.171\d\zw_test\GYKJ\2022\GYKJ202212012.html
+2024-05-06 10:20:57 [zwspider] INFO: 已保存：\\192.168.1.171\d\zw_test\GXZJ\2022\GXZJ202205004.html

@@ -1,0 +1,7 @@
+Scrapy~=2.9.0
+redis~=5.0.1
+SQLAlchemy~=1.4.52
+itemadapter~=0.8.0
+colorlog~=6.8.0
+pathlib~=1.0.1
+Twisted~=22.10.0

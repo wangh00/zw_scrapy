@@ -1,0 +1,34 @@
+(300)scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware：用于处理 HTTP 基本身份验证（HTTP Basic Authentication）。当爬虫需要使用用户名和密码进行网站访问时，该中间件负责添加身份验证信息到请求头中。
+
+(350)scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware：设置请求的下载超时时间。如果请求在指定的时间内未完成下载，中间件将会取消请求并引发超时异常。
+
+(400)scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware：用于设置默认的请求头。可以在设置中配置默认的请求头信息，以确保每个请求都包含这些头部信息。
+
+(500)scrapy.downloadermiddlewares.useragent.UserAgentMiddleware：用于设置请求的用户代理（User-Agent）。可以在设置中配置多个用户代理，中间件将会在每个请求中随机选择一个用户代理。
+
+(550)scrapy.downloadermiddlewares.retry.RetryMiddleware：在请求失败时自动重试。可以在设置中配置重试策略，包括最大重试次数、重试延迟等。
+
+---------->(560)AjaxCrawlMiddleware 在接收到 AJAX 页面的响应时，会检查页面中是否包含 AJAX 请求的 URL。如果存在这样的 URL，中间件会发送额外的请求来获取 AJAX 加载的内容，并将其合并到原始页面中，从而获得完整的页面内容。这样，爬虫就能够获取到包含动态加载内容的完整页面，并进一步进行数据提取和处理。
+
+(580)scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware：处理网页的元标签刷新重定向。当网页中包含 <meta http-equiv="refresh" content="5;url=http://example.com/"> 这样的标签时，中间件将会自动跳转到指定的 URL。
+
+(590)scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware：用于处理 HTTP 响应的压缩。当服务器返回压缩过的响应时，中间件将会自动解压缩响应内容。
+
+(600)scrapy.downloadermiddlewares.redirect.RedirectMiddleware：处理 HTTP 重定向。当服务器返回 3xx 状态码时，中间件将会自动跟随重定向并发送新的请求。
+
+(700)scrapy.downloadermiddlewares.cookies.CookiesMiddleware：处理网站的 Cookies。中间件负责在请求中包含先前响应中设置的 Cookies，并在接收到响应后更新 Cookies。
+
+(750)scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware：用于设置代理服务器。在发送请求时，中间件将会通过指定的代理服务器来发送请求，以隐藏爬虫的真实 IP 地址。
+
+(850)scrapy.downloadermiddlewares.stats.DownloaderStats：收集下载器的统计信息，如下载的请求数、下载的数据量等。可以在日志中查看这些统计信息。
+
+---------->(900)HttpCacheMiddleware 在发送 HTTP 请求之前会检查本地缓存，如果已经存在缓存的响应，则直接从缓存中获取响应，而不发送实际的网络请求。只有当缓存中不存在响应或者缓存过期时，爬虫才会发送实际的网络请求获取页面内容，并将响应缓存下来以供后续使用。
+
+
+scrapy.signals.spider_error(failure, response, spider)
+Sent when a spider callback generates an error (i.e. raises an exception).
+
+This signal does not support returning deferreds from its handlers.
+
+
+
